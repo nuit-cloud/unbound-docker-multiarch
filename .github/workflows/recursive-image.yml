@@ -4,7 +4,7 @@ name: Recursive image
 # `recursive` (moves) and `recursive-<short sha>` (immutable — deploy this one, or its digest).
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
     paths: [ "recursive/**", ".github/workflows/recursive-image.yml" ]
   workflow_dispatch:
 

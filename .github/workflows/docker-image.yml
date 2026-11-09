@@ -2,10 +2,10 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
+    paths: [ "1.24.2/**", ".github/workflows/docker-image.yml" ]
     tags: [ 'v*' ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
@@ -14,7 +14,7 @@ env:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
